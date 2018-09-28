@@ -6,7 +6,7 @@ class Appointment < ActiveRecord::Base
   belongs_to :patient
 
   def appointment_datetime_to_s
-    Time.parse(self.appointment_datetime).strftime("%B %e,%Y at %k:%M")
+    self.appointment_datetime.strftime("%B %e,%Y at %k:%M")
   end
 
 end
